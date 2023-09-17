@@ -1,5 +1,3 @@
-![overview_final](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/20f2368c-c3f5-4942-b9c5-b26f5648a19f)# ALPA: Averaging for Low-Precision Activation for memory efficient training
-
 This repository is the official implementation of https://openreview.net/forum?id=BG7H1XsMG0.
 
 + We propose the Average Quantization algorithm, which generates high-quality sub-1b compressed activations, enabling the allocation of more bits to high-sensitivity activations.
