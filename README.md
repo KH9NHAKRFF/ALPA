@@ -1,4 +1,4 @@
-# ALPA: Averaging for Low-Precision Activation for memory efficient training
+![overview_final](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/20f2368c-c3f5-4942-b9c5-b26f5648a19f)# ALPA: Averaging for Low-Precision Activation for memory efficient training
 
 This repository is the official implementation of https://openreview.net/forum?id=BG7H1XsMG0.
 
@@ -8,7 +8,7 @@ This repository is the official implementation of https://openreview.net/forum?i
 
 ## Abstract
  During the training of large language models, the memory required for activation occupies a substantial portion, which further increases as batch size or sequence length expands. Activation Compression Training (ACT) frameworks have been proposed to reduce this activation memory, however, these frameworks prove challenging to implement in sensitive transformer models, and even when applied, they often lead to considerable reductions in accuracy due to the inferior quality of the compressed activations at extremely low bit. In this paper, we introduce ALPA, a novel ACT framework that utilizes average quantization and gradient normalization variance. First, we demonstrate that when compressing activation to group average, the gradient variance can be minimized. Building on this, we propose Average Quantization, which allows us to allocate fewer than 1-bit to activations with low sensitivity, thereby providing room to assign more bits to activations with high sensitivity. Secondly, in contrast to the previous activation compression training necessitates all parameter gradients from various seeds for sensitivity, we present the GradNorm Variance algorithm, which solely relies on L2-normalization value of parameter gradients for determining sensitivity, thereby substantially reducing the memory overhead associated with calculating sensitivity. The ALPA successfully reduces activation memory significantly without compromising accuracy across Transformer models of varying sizes. Notably, the ALPA has attained up to a 12.5x compression rate in Large Language Models, such as LaMMA-7B.
-![overview_final](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/fe409dda-cfe1-4b1e-84cb-5425e0aaa5a5)
+![overview_final](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/d3c095d5-8c78-46b6-a3a0-f3b2e8369086)
 
 
 
@@ -60,11 +60,11 @@ controller.uninstall_hook()
 ## Results
 
 ### 1. Text classification
-![results_text_classification](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/4a91560a-753d-49cd-a0af-52767ec2f790)
+![results_text_classification](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/1ddcab5c-c3bc-4475-95ae-02ca9c06bbd8)
 
 
 ### 2. Large Language Models
-![results_llm](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/d552cc1e-5d86-4ae7-b06e-531b385c079a)
+![results_llm](https://github.com/KH9NHAKRFF/ALPA/assets/144604248/ff9fd079-c832-456e-a819-b2a82f437f79)
 
 
 ## Example
